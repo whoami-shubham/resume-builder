@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>resume</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			background: #3C4D58;
+		}
+		.row{
+			background: #fff;
+			padding: 20px;
+		}
+		.r{
+			padding-top: 15px;
+		}
+        .container{
+            margin-top: 15%;
+            margin-bottom: 15%;
+        }
+		input{
+			border: none;
+			overflow: hidden;
+		    border-color: Transparent; 
+		    margin:auto;
+		    padding: 5px;
+		    font-family: monospace;
+		}
+		button{
+			visibility: hidden;
+			padding: 5px;
+		}
+		p{
+			text-align: justify;
+		}
+		td{
+			padding: 10px;
+		}
+		#name{
+			margin-top: 10%;
+			font-size: -webkit-xxx-large;
+			width: -webkit-fill-available;
+
+		}
+		.heading1{
+			font-size: large;
+			font-weight: bold;
+
+		}
+		.heading2{
+			font-size: large;
+			font-weight: bold;
+		}
+		.col-sm-8{
+			padding-left: 15%;
+		}
+		.col-sm-9{
+			padding-left: 14%;
+		}
+		li{
+			text-align: justify;
+		}
+		.glyphicon-envelope,.glyphicon-phone,.glyphicon-home{
+			float: left;
+			line-height: 2;
+
+		}
+        @media (min-width: 768px){
+			.col-sm-9 {
+			       width: 64%;
+			}
+		}
+		#download{
+			visibility: visible;
+			text-align: center;
+			margin-top: 5px;
+		}
+		.lskills{
+			padding-left: 10px;
+		}
+		.rskills{
+          padding-left: 14%;
+		}
+		#sk{
+			margin: 3%;
+		}
+		.glyphicon-remove{
+			visibility: hidden;
+			color:black;
+		}
+		.badge-primary{
+			background: #007bff;
+		}
+		.badge{
+			color: white;
+		}
+		.m-5{
+			margin: 5px;
+		}
+		/*input:focus {
+          outline: 0px solid transparent;
+         }*/
+
+
+	</style>
+</head>
+<body>
+	<button class="btn btn-primary" id="download" onclick="PDF()" >download</button>
+	<div class="container" id="resume">
+		<div class="row">
+			<div class="col-sm-5 r">
+				<span id="add">
+					<span onmouseenter="show('addr')" onmouseleave="hide('addr')" id="addr"><a href="#"><span class="glyphicon glyphicon-home"></span></a><input type="text" class="col-sm-9" placeholder="Address" maxlength="18">
+					<button class="btn btn-success" onclick="add('address')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('addr')"><span class="glyphicon glyphicon-trash"></span></button><br></span>
+					<span onmouseenter="show('addr1')" onmouseleave="hide('addr1')" id="addr1"><input type="text" class="col-sm-9" placeholder=" Address" maxlength="18">
+					<button class="btn btn-success" onclick="add('address')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('addr1')"><span class="glyphicon glyphicon-trash"></span></button><br></span>
+				</span>
+				<span id="em">
+					<span onmouseenter="show('email')" onmouseleave="hide('email')" id="email"><a href="#"><span class="glyphicon glyphicon-envelope"></span></a><input type="email" class="col-sm-9" placeholder="email" >
+					<button class="btn btn-success" onclick="add('email')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('email')"><span class="glyphicon glyphicon-trash"></span></button><br></span>
+			    </span>
+			    <span id="ph">
+				    <span onmouseenter="show('phone')" onmouseleave="hide('phone')" id="phone"><a href="#"><span class="glyphicon glyphicon-phone"></span></a><input type="tel"  class="col-sm-9" placeholder="phone" maxlength="13"><button class="btn btn-success" onclick="add('phone')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('phone')"><span class="glyphicon glyphicon-trash"></span></button><br></span>
+			  </span>
+			</div>
+			<div class="col-sm-7">
+				<input type="text" id="name" placeholder="Name"  maxlength="19"><br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<table width="100%" id="table">
+					<tr id="tr1" onmouseenter="show('tr1')" onmouseleave="hide('tr1')" >
+						<td class="col-sm-3"><p class="heading1" contenteditable="true">WORK EXPERIENCE</p></td>
+						<td contenteditable="true" id="td1" class="col-sm-8"><p class="heading2">Company Name <button class="btn btn-success" contenteditable="false" onclick="addelement('1')"><span class="glyphicon glyphicon-plus-sign"></span></button></p>
+							<ul>
+								<li>Position</li>
+								<li>About</li>
+							</ul>
+						</td>
+						<td class="col-sm-1">
+						<button class="btn btn-success" onclick="add('tr')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('tr1')"><span class="glyphicon glyphicon-trash"></span></button></td>
+					</tr>
+					<tr id="tr2" onmouseenter="show('tr2')" onmouseleave="hide('tr2')">
+						<td class="col-sm-3"><p class="heading1" contenteditable="true">EDUCATION</p></td>
+						<td  class="col-sm-8"contenteditable="true" id="td2"><p class="heading2">Collage Name <button class="btn btn-success" contenteditable="false" onclick="addelement('2')"><span class="glyphicon glyphicon-plus-sign"></span></button></p>
+							<ul>
+								<li>Major</li>
+								<li>About</li>
+							</ul>
+						</td>
+						<td class="col-sm-1">
+						<button class="btn btn-success" onclick="add('tr')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('tr1')"><span class="glyphicon glyphicon-trash"></span></button></td>
+					</tr>
+					<tr>
+						<td class="col-sm-3" onmouseenter="show('skills')" onmouseleave="hide('skills')"  >
+				             <p class="heading1" >SKILLS</p><span id="skills"><input type="text" id="sk" ><button class="btn btn-primary" onclick="add('skill')"><span class="glyphicon glyphicon-plus-sign"></span></button></span>
+						</td>
+						<td class="col-sm-9" id="skill">
+							<span class="badge badge-primary m-5" id="s1" onmouseenter="show_d('s1')" onmouseleave="hide_d('s1')">Skill<span class="glyphicon glyphicon-remove" onclick="del('s1')"></span></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		    </div>
+	</div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
