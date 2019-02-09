@@ -123,9 +123,9 @@ function hide_d(id){
     elem.style.visibility = "hidden";
 }
 function PDF(){
-	var body = document.body.innerHtml;
-	var content = document.getElementById('resume').innerHtml;
-	document.body.innerHtml = content;
+	var body = document.body.innerHTML;
+	var content = document.getElementById('resume').innerHTML;
+	document.body.innerHTML = content;
 	window.print();
-	document.body.innerHtml = body;
+	document.body.innerHTML = body;
 }
