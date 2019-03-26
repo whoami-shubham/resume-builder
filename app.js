@@ -1,3 +1,8 @@
+/*
+*  i am maintaining Ids for each element  as a variable and whenever i create a element i increase the id of that
+*  element and pass that id as parameter to eventHandler function in order to access that element.
+*/
+
 var Address = 1
 var phone = 0
 var email = 0
@@ -122,6 +127,12 @@ function hide_d(id){
 	let elem = document.getElementById(id).getElementsByTagName('span')[0]
     elem.style.visibility = "hidden";
 }
+
+/*
+* in PDF function i am swaping content of body with content of resume while printing it.
+* after that i am swaping back.
+*/
+
 function PDF(){
 	var body = document.body.innerHTML;
 	var content = document.getElementById('resume').innerHTML;
