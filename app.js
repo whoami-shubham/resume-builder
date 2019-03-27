@@ -16,7 +16,7 @@ function new_skill(skill,name){
 function new_address(address){
 	Address = Address + 1;
 	let id = 'addr'+Address;
-	return `<span onmouseenter="show('${id}')" onmouseleave="hide('${id}')" id=${id}><a href="#"><span class="glyphicon glyphicon-home"></span></a><input type="text" class="col-sm-9" placeholder="Address" maxlength="18">
+	return `<span onmouseenter="show('${id}')" onmouseleave="hide('${id}')" id=${id}><input type="text" class="col-sm-9" placeholder="Address" maxlength="18">
 					<button class="btn btn-success" onclick="add('address')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('${id}')"><span class="glyphicon glyphicon-trash"></span></button><br></span>`;
 }
 function new_email(email){
