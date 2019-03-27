@@ -29,7 +29,7 @@ function new_email(email){
 function new_phone(phone){
 	phone = phone +1;
 	let id = 'phone'+phone;
-	return `<span onmouseenter="show('${id}')" onmouseleave="hide('${id}')" id=${id}><a href="#"><span class="glyphicon glyphicon-phone"></span></a><input type="tel"  class="col-sm-9" placeholder="phone" maxlength="13"><button class="btn btn-success" onclick="add('phone')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('${id}')"><span class="glyphicon glyphicon-trash"></span></button><br></span>`;
+	return `<span onmouseenter="show('${id}')" onmouseleave="hide('${id}')" id=${id}><input type="tel"  class="col-sm-9" placeholder="phone" maxlength="13"><button class="btn btn-success" onclick="add('phone')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('${id}')"><span class="glyphicon glyphicon-trash"></span></button><br></span>`;
 }
 
 function addelement(id){
