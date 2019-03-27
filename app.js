@@ -22,7 +22,7 @@ function new_address(address){
 function new_email(email){
 	email = email + 1;
 	let id = 'email' + email;
-	return `<span onmouseenter="show('${id}')" onmouseleave="hide('${id}')" id=${id}><a href="#"><span class="glyphicon glyphicon-envelope"></span></a><input type="email" class="col-sm-9" placeholder="email" >
+	return `<span onmouseenter="show('${id}')" onmouseleave="hide('${id}')" id=${id}><input type="email" class="col-sm-9" placeholder="email" >
 					<button class="btn btn-success" onclick="add('email')"><span class="glyphicon glyphicon-plus-sign"></span></button><button class="btn btn-danger" onclick="del('${id}')"><span class="glyphicon glyphicon-trash"></span></button><br></span>`;
 }
 
